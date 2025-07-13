@@ -22,9 +22,9 @@ alias la="ls -A"
 alias l="ls -CF"
 alias gs="git status"
 alias gc="git commit"
-alias ga="git add ."
+alias ga="git add"
 alias gp="git push"
-alias gl="git log --all --graph --oneline --parents"
+alias gl="git --no-pager log --all --graph --oneline --parents"
 alias ..="cd .."
 alias ...="cd ../.."
 alias p="python3"
@@ -48,8 +48,6 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-eval "$(uv generate-shell-completion zsh)"
-eval "$(uv generate-shell-completion zsh)"
 
 # Created by `pipx` on 2025-07-13 03:50:08
 export PATH="$PATH:/home/harvidston/.local/bin"
