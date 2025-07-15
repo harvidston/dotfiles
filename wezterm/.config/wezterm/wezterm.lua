@@ -19,7 +19,7 @@ config.font = wezterm.font {
     weight = 'Regular',
 }
 -- or, changing the font size and color scheme.
-config.font_size = 15
+config.font_size = 13.5
 config.color_scheme = "kanagawabones"
 --config.color_scheme = 'Black Metal (Bathory) (base16)'
 --config.color_scheme = 'Twilight (Gogh)'
