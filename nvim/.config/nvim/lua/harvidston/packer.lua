@@ -12,6 +12,9 @@ end
 local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
+  use 'mfussenegger/nvim-dap-python'
+  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
+
   -- Цветовые схемы и интерфейс
   use 'rebelot/kanagawa.nvim'
   use 'sainnhe/gruvbox-material'
