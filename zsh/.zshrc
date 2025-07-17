@@ -25,6 +25,7 @@ alias gc="git commit"
 alias ga="git add"
 alias gp="git push"
 alias gl="git --no-pager log --all --graph --oneline --parents"
+alias gw="git switch"
 alias ..="cd .."
 alias ...="cd ../.."
 alias p="python3"
@@ -37,10 +38,6 @@ alias lg="lazygit"
 alias reload="source ~/.zshrc"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Цвета ls
-export CLICOLOR=1
-export LSCOLORS=ExFxBxDxCxegedabagacad
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
