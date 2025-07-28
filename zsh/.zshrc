@@ -13,8 +13,8 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#67665F'
-bindkey '^F' autosuggest-accept
+#ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#67665F'
+bindkey '^[[Z' autosuggest-accept
 
 alias bat="batcat"
 alias ll="ls -alF"
@@ -48,3 +48,4 @@ export NVM_DIR="$HOME/.nvm"
 
 # Created by `pipx` on 2025-07-13 03:50:08
 export PATH="$PATH:/home/harvidston/.local/bin"
+export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
