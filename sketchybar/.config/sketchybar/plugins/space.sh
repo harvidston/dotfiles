@@ -9,9 +9,9 @@ update() {
     #echo space.sh $'FOCUSED_WORKSPACE': $FOCUSED_WORKSPACE, $'SELECTED': $SELECTED, NAME: $NAME, SENDER: $SENDER, INFO: $INFO  >> ~/aaaa
     #echo $(aerospace list-workspaces --focused) >> ~/aaaa
     source "$CONFIG_DIR/colors.sh"
-    COLOR=$BACKGROUND_2
+    COLOR=$BLACK
     if [ "$SELECTED" = "true" ]; then
-      COLOR=$GREY
+      COLOR=$BLACK
     fi
     # sketchybar --set $NAME icon.highlight=$SELECTED \
     #                        label.highlight=$SELECTED \
@@ -19,7 +19,7 @@ update() {
     
     sketchybar --set space.$(aerospace list-workspaces --focused) icon.highlight=true \
                       label.highlight=true \
-                      background.border_color=$GREY
+                      background.border_color=$BLACK
   fi
 }
 

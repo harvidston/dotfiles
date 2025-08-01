@@ -6,7 +6,7 @@
 # New space by left clicking separator (>)
 
 sketchybar --add event aerospace_workspace_change
-#echo $(aerospace list-workspaces --monitor 1 --visible no --empty no) >> ~/aaaa
+echo $(aerospace list-workspaces --monitor 1 --visible no --empty no) >> ~/aaaa
 
 for m in $(aerospace list-monitors | awk '{print $1}'); do
   for i in $(aerospace list-workspaces --monitor $m); do
@@ -14,19 +14,20 @@ for m in $(aerospace list-monitors | awk '{print $1}'); do
     space=(
       space="$sid"
       icon="$sid"
-      icon.highlight_color=$RED
-      icon.padding_left=10
-      icon.padding_right=10
+	  icon.color=$DARK_GREY
+      icon.highlight_color=$WHITE
+      icon.padding_left=7
+      icon.padding_right=2
       display=$m
       padding_left=2
       padding_right=2
-      label.padding_right=20
-      label.color=$GREY
+      label.padding_right=15
+      label.color=$DARK_GREY
       label.highlight_color=$WHITE
-      label.font="sketchybar-app-font:Regular:16.0"
+      label.font="sketchybar-app-font:Regular:13.0"
       label.y_offset=-1
-      background.color=$BACKGROUND_1
-      background.border_color=$BACKGROUND_2
+      background.color=$BLACK
+      background.border_color=$BLACK
       script="$PLUGIN_DIR/space.sh"
     )
 
@@ -66,7 +67,7 @@ space_creator=(
   #click_script='yabai -m space --create'
   script="$PLUGIN_DIR/space_windows.sh"
   #script="$PLUGIN_DIR/aerospace.sh"
-  icon.color=$WHITE
+  icon.color=$BLACK
 )
 
 # sketchybar --add item space_creator left               \
