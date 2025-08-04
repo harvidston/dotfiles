@@ -37,7 +37,15 @@ return require('packer').startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   }
-
+  use {
+    "nvim-treesitter/playground",
+    cmd = "TSPlaygroundToggle",
+    config = function()
+      require("nvim-treesitter.configs").setup {
+        playground = { enable = true }
+      }
+    end
+  }
   -- LSP и автодополнение
   use 'williamboman/mason.nvim'           -- установка LSP серверов
   use 'williamboman/mason-lspconfig.nvim' -- интеграция mason и lspconfig

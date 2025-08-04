@@ -8,12 +8,7 @@ local luasnip = require("luasnip")
 local cmp = require("cmp")
 
 cmp.setup({
-
-  -- ... Your other configuration ...
-
   mapping = {
-
-    -- ... Your other mappings ...
 
     ["<Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
@@ -38,8 +33,6 @@ cmp.setup({
         fallback()
       end
     end, { "i", "s" }),
-
-    -- ... Your other mappings ...
   },
 
   snippet = {

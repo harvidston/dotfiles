@@ -7,34 +7,6 @@ vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.cmd 'set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz'
-
-require("kanagawa").setup({
-  theme = "wave",
-  colors = {
-    theme = {
-      all = {
-        ui = {
-          bg_gutter = "#15151A", -- глобальный цвет фона для окон и split'ов
-          bg = "#15151A",        -- основной фон
-        }
-      }
-    }
-  },
-  overrides = function(colors)
-    return {
-      Normal = { bg = "#15151A", fg = colors.fg }, -- Цвет фона
-      NormalNC = { bg = "#15151A" }, -- Цвет фона неактивных окон
-	  SignColumn = { bg = "#15151A" },
-	  LineNr = {
-        fg = colors.dimmed3,  -- Цвет цифр номеров строк
-        bg = "#15151A",       -- Цвет фона для столбца с номерами строк
-      },
-	  Comment = { fg = "#67665F", italic = false }, -- Цвет комментариев
-      --CursorLine = { bg = "#2d2d3a" },-- Цвет текущей строки
-      Visual = { bg = "#393646" },-- Цвет выделения
-    }
-  end
-})
 vim.cmd("colorscheme kanagawa")
 
 --vim.opt.hlsearch = false
@@ -54,6 +26,7 @@ map('i', 'лл', '<Esc>')
 map('v', '<leader>y', '"+y')
 map('n', '<leader>p', '"+p')
 map('n', 'm', 'ci')
+map('n', '"', [["_ci"]], opts)
 -- Save file changes
 map('n', '<leader>s', ':w<CR>')
 map('n', '<leader>ы', ':w<CR>')
